@@ -5,7 +5,22 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+   "keywords": [
+    "AI",
+    "SDK",
+    "LLM",
+    "ChatGPT",
+    "OpenAI",
+    "Anthropic",
+    "Claude",
+    "Gemini",
+    "Mistral",
+    "DeepSeek",
+    "AI unifier",
+    "AI API",
+    "AI integration",
+    "universal AI"
+  ],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
