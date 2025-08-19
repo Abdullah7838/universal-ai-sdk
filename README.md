@@ -1,21 +1,21 @@
-# 🌐 universal-ai-sdk
+# universal-ai-sdk
 
 A **unified AI SDK for Node.js/TypeScript** that lets you talk to **multiple AI providers (OpenAI, Anthropic/Claude, DeepSeek, etc.)** with **one simple API**.  
 No need to learn multiple SDKs — just plug in your API key and go! 🚀
 
 ---
 
-## ✨ Features
+## Features
 
-- ✅ One API for multiple AI providers  
-- ✅ Supports **OpenAI**, **Anthropic (Claude)**, **DeepSeek** (more coming soon)  
-- ✅ **TypeScript support** out of the box  
-- ✅ **Switch providers easily** (no code changes needed)  
-- ✅ **Normalized response format** (`{ text, raw }`)  
+- One API for multiple AI providers  
+- Supports **OpenAI**, **Anthropic (Claude)**, **DeepSeek** (more coming soon)  
+- **TypeScript support** out of the box  
+- **Switch providers easily** (no code changes needed)  
+- **Normalized response format** (`{ text, raw }`)  
 
 ---
 
-## 📦 Installation
+## Installation
 
 ```bash
 npm install universal-ai-sdk
@@ -23,16 +23,14 @@ npm install universal-ai-sdk
 Add your API keys to a .env file or system environment variables:
 
 ini
-Copy
-Edit
+
 OPENAI_API_KEY=sk-xxxx
 ANTHROPIC_API_KEY=sk-ant-xxxx
 DEEPSEEK_API_KEY=sk-deep-xxxx
-🚀 Usage
+ Usage
 Example 1: OpenAI (ChatGPT)
 ts
-Copy
-Edit
+
 import { chat } from "universal-ai-sdk";
 
 async function run() {
@@ -48,8 +46,7 @@ async function run() {
 run();
 Example 2: Switch to Anthropic (Claude)
 ts
-Copy
-Edit
+
 const res = await chat({
   provider: "anthropic",
   model: "claude-3-opus",
@@ -59,8 +56,7 @@ const res = await chat({
 console.log(res.text);
 Example 3: DeepSeek
 ts
-Copy
-Edit
+
 const res = await chat({
   provider: "deepseek",
   model: "deepseek-chat",
@@ -68,12 +64,11 @@ const res = await chat({
 });
 
 console.log(res.text);
-🛠 API Reference
+API Reference
 chat(options: AIRequest): Promise<AIResponse>
 AIRequest
 ts
-Copy
-Edit
+
 {
   provider: "openai" | "anthropic" | "deepseek";
   model: string;
@@ -82,13 +77,12 @@ Edit
 }
 AIResponse
 ts
-Copy
-Edit
+
 {
   text: string; // normalized AI reply
   raw: any;     // full provider response
 }
-🗺 Roadmap
+ Roadmap
  Streaming responses (async generator)
 
  Token usage tracking
@@ -99,7 +93,7 @@ Edit
 
  More providers (Gemini, Groq, Mistral, Llama 3, etc.)
 
-🤝 Contributing
+ Contributing
 Pull requests, issues, and new provider integrations are welcome! 🎉
 
 📜 License
@@ -107,5 +101,4 @@ MIT © 2025 Muhammad Abdullah
 📧 Email: needhelpvcc@gmail.com
 
 yaml
-Copy
-Edit
+
